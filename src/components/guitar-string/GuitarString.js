@@ -25,7 +25,7 @@ export default function GuitarString({ string }) {
     return (
         <div>
             <label>{string} </label>
-            <canvas id={string} onClick={() => playNote(string)}></canvas>
+            <canvas id={string} onMouseOver={() => playNote(string)}></canvas>
         </div>
     )
 }
