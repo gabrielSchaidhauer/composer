@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import MusicService from "../../services/MusicService";
 import './GuitarString.css';
 
@@ -25,7 +25,7 @@ export default function GuitarString({ string }) {
     return (
         <div>
             <label>{string} </label>
-            <canvas id={string} onMouseOver={() => playNote(string)}></canvas>
+            <canvas id={string} onClick={() => playNote(string)}></canvas>
         </div>
     )
 }
