@@ -2,6 +2,11 @@ import * as Tone from 'tone'
 
 
 export default class MusicService {
+
+    start() {
+        Tone.start();
+    }
+
     playNote(note) {
         const noteMapper = {
             'e': 'E4',
@@ -14,6 +19,6 @@ export default class MusicService {
 
         Tone.start();
         const synth = new Tone.PolySynth(Tone.Synth).toDestination();
-        synth.triggerAttackRelease(noteMapper[note], 1);
+        synth.triggerAttackRelease(noteMapper[note], 0.3);
     }
 }

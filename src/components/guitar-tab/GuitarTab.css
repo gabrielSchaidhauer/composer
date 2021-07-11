@@ -4,8 +4,13 @@
     margin: auto;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
-.tabLine {
-    margin: auto;
+.tab_line {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
