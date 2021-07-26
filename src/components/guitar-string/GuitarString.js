@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import MusicService from "../../services/MusicService";
 import './GuitarString.css';
 
 export default function GuitarString({ string, stringTab = [], currentPosition = 0, started = false }) {
@@ -9,17 +8,9 @@ export default function GuitarString({ string, stringTab = [], currentPosition =
     const fontName = 'Arial'
     const lineWidth = 2;
 
-    const playNote = (note) => {
-        const musicService = new MusicService();
-        musicService.playNote(note)
-    }
 
     useEffect(() => {
-        console.log(currentPosition)
-        if(currentPosition < stringTab.length && stringTab[currentPosition] !== undefined && started) {
-            console.log('deu')
-            playNote(string);
-        }
+        //TODO: ADD Visuals here
     }, [currentPosition, started])
 
     useEffect(() => {
